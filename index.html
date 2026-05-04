@@ -107,6 +107,7 @@
       padding: 120px 80px 80px;
       max-width: 1280px;
       margin: 0 auto;
+      overflow: hidden;
     }
 
     .hero-content { max-width: 520px; }
@@ -859,44 +860,35 @@
         grid-template-columns: 1fr;
         text-align: center;
         padding: 100px 24px 60px;
-        gap: 60px;
+        gap: 48px;
       }
 
       .hero-content { max-width: 100%; }
       .hero-sub { max-width: 100%; }
-
       .cta-row { justify-content: center; }
-
-      .iphone { width: 170px; height: 362px; border-radius: 36px; padding: 8px; }
-      .iphone-inner { border-radius: 30px; }
-      .di { width: 56px; height: 18px; border-radius: 9px; }
-      .phone-wrap:nth-child(1) { transform: rotate(-7deg) translateY(40px); margin-right: -32px; }
-      .phone-wrap:nth-child(3) { transform: rotate(7deg) translateY(40px); margin-left: -32px; }
-      .phone-wrap:nth-child(1):hover { transform: rotate(-7deg) translateY(-10px) scale(1.1); }
-      .phone-wrap:nth-child(2):hover { transform: translateY(-10px) scale(1.1); }
-      .phone-wrap:nth-child(3):hover { transform: rotate(7deg) translateY(-10px) scale(1.1); }
-
       .section-wrap { padding: 0 24px; }
-
       .steps { grid-template-columns: 1fr; gap: 16px; }
       .rituals-grid { grid-template-columns: 1fr 1fr; }
-
       .download-inner { padding: 48px 24px; border-radius: 24px; }
       .download-cta-row { flex-direction: column; gap: 20px; }
-
       footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
     }
 
     @media (max-width: 600px) {
       .rituals-grid { grid-template-columns: 1fr; }
-    }
 
-    @media (max-width: 500px) {
-      .iphone { width: 130px; height: 276px; border-radius: 28px; padding: 6px; }
-      .iphone-inner { border-radius: 23px; }
-      .di { width: 44px; height: 14px; border-radius: 7px; margin-top: 7px; }
-      .phone-wrap:nth-child(1) { transform: rotate(-7deg) translateY(32px); margin-right: -24px; }
-      .phone-wrap:nth-child(3) { transform: rotate(7deg) translateY(32px); margin-left: -24px; }
+      /* Hide side phones, show only center */
+      .phone-wrap:nth-child(1),
+      .phone-wrap:nth-child(3) { display: none; }
+
+      .phone-wrap:nth-child(2) {
+        transform: none !important;
+        margin: 0 !important;
+      }
+
+      .iphone { width: 240px; height: 510px; border-radius: 46px; padding: 8px; }
+      .iphone-inner { border-radius: 39px; }
+      .di { width: 66px; height: 20px; border-radius: 10px; }
     }
   </style>
 </head>
