@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oxytocin.rahulgurung.com/sitemap.xml
